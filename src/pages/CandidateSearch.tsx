@@ -38,7 +38,7 @@ const CandidateSearch = () => {
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const data = await searchGithubUser("");
+      const data = await searchGithubUser();
       setCurrentCandidate({
         // Name: data.name,
         Login: data.login,
@@ -70,7 +70,12 @@ const CandidateSearch = () => {
         </div>
       </div>
       <div className="button-container">
-        <div className="minus-button">-</div>
+        <div
+          className="minus-button"
+          onClick={searchGithub || searchGithubUser}
+        >
+          -
+        </div>
         <div className="plus-button" onClick={addToPotentialCandidates}>
           +
         </div>
