@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import { searchGithub, searchGithubUser } from "../api/API.tsx";
 import Candidate from "../interfaces/Candidate.interface";
 
-const CandidateSearch = () => {
+const CandidateSearch: React.FC = () => {
   const [currentCandidate, setCurrentCandidate] = useState<Candidate>({
     // Name: "",
-    Login: "",
-    Username: "",
-    Location: "",
     Avatar_url: "",
+    Location: "",
     Email: "",
-    Html_url: "",
     Company: "",
     Bio: "",
+    Html_url: "",
+    Login: "",
   });
 
   const addToPotentialCandidates = () => {
@@ -29,26 +28,26 @@ const CandidateSearch = () => {
     );
   };
 
-  useEffect(() => {
-    const result = searchGithub();
-    result.then((data) => {
-      console.log(data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   const result = searchGithub();
+  //   result.then(async () => {
+  //     // console.log(data);
+  //   });
+  // }, []);
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const data = await searchGithubUser();
+      const users = await searchGithub();
+      const data = await searchGithubUser(users[0].login);
       setCurrentCandidate({
         // Name: data.name,
-        Login: data.login,
-        Username: data.username,
-        Location: data.location,
         Avatar_url: data.avatar_url,
+        Location: data.location,
         Email: data.email,
-        Html_url: data.html_url,
         Company: data.company,
         Bio: data.bio,
+        Html_url: data.html_url,
+        Login: data.login,
       } as Candidate);
     };
     fetchUserData();
@@ -57,7 +56,7 @@ const CandidateSearch = () => {
   return (
     <>
       <h1>CandidateSearch</h1>
-      <div className="candidate-card" key={currentCandidate.Username}>
+      <div className="candidate-card" key={currentCandidate.Login}>
         <div className="candidate-card-image">
           <img src={currentCandidate.Avatar_url} alt="" />
         </div>
