@@ -17,7 +17,7 @@ const SavedCandidates = () => {
       <table className="table">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Image</th>
             <th>Username</th>
             <th>Location</th>
             <th>Email</th>
@@ -28,7 +28,6 @@ const SavedCandidates = () => {
         <tbody>
           {candidates.map((candidate, index) => (
             <tr key={index}>
-              <td>{candidate.Name}</td>
               <td>{candidate.Login}</td>
               <td>{candidate.Location}</td>
               <td>{candidate.Email}</td>

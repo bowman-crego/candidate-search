@@ -70,7 +70,17 @@ const CandidateSearch: React.FC = () => {
       <div className="button-container">
         <div
           className="minus-button"
-          onClick={searchGithub || searchGithubUser}
+          onClick={() =>
+            setCurrentCandidate({
+              Avatar_url: "",
+              Location: "",
+              Email: "",
+              Company: "",
+              Bio: "",
+              Html_url: "",
+              Login: "",
+            })
+          }
         >
           -
         </div>
