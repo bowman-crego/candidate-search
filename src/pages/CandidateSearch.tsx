@@ -61,7 +61,6 @@ const CandidateSearch: React.FC = () => {
           <img src={currentCandidate.Avatar_url} alt="" />
         </div>
         <div className="candidate-card-info">
-          <div>{currentCandidate.Avatar_url}</div>
           <div>{currentCandidate.Location}</div>
           <div>{currentCandidate.Email}</div>
           <div>{currentCandidate.Company}</div>

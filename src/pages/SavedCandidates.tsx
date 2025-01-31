@@ -20,9 +20,7 @@ const SavedCandidates = () => {
             <th>Name</th>
             <th>Username</th>
             <th>Location</th>
-            <th>Avatar_url</th>
             <th>Email</th>
-            <th>Html_url</th>
             <th>Company</th>
             <th>Bio</th>
           </tr>
@@ -33,9 +31,7 @@ const SavedCandidates = () => {
               <td>{candidate.Name}</td>
               <td>{candidate.Login}</td>
               <td>{candidate.Location}</td>
-              <td>{candidate.Avatar_url}</td>
               <td>{candidate.Email}</td>
-              <td>{candidate.Html_url}</td>
               <td>{candidate.Company}</td>
               <td>{candidate.Bio}</td>
             </tr>

@@ -1,33 +1,70 @@
-# React + TypeScript + Vite
+# Candidate Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Candidate Search is a project designed to streamline the process of finding and evaluating job candidates. This tool helps recruiters and hiring managers to efficiently search, filter, and review potential candidates based on various criteria.
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Candidate Profiles**: View comprehensive profiles of candidates. Add them to potential candidates list.
 
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation
 
-* Configure the top-level `parserOptions` property as follows:
+To install the project, follow these steps:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Clone the repository:
+
+```bash
+git clone https://github.com/bowman-crego/candidate-search.git
 ```
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+2. Navigate to the project directory:
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+```bash
+cd candidate-search
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+## Usage
+
+To start the application, run:
+
+```bash
+npm start
+```
+
+Open your browser and navigate to `http://localhost:5173` to access the application.
+
+## Contributing
+
+We welcome contributions! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+3. Make your changes and commit them:
+
+```bash
+git commit -m "Add your feature"
+```
+
+4. Push to the branch:
+
+```bash
+git push origin feature/your-feature-name
+```
+
+5. Create a pull request.
+
+## Contact
+
+For any questions or feedback, please contact us at [bowmanccrego@gmail.com](bowmanccrego@gmail.com).
