@@ -4,8 +4,9 @@ import Candidate from "../interfaces/Candidate.interface";
 
 const CandidateSearch: React.FC = () => {
   const [currentCandidate, setCurrentCandidate] = useState<Candidate>({
-    // Name: "",
-    Avatar_url: "",
+    Image: "",
+    Avatar_url: "", 
+    Username: "",
     Location: "",
     Email: "",
     Company: "",
@@ -42,6 +43,7 @@ const CandidateSearch: React.FC = () => {
       setCurrentCandidate({
         // Name: data.name,
         Avatar_url: data.avatar_url,
+        Username: data.name,  
         Location: data.location,
         Email: data.email,
         Company: data.company,
@@ -57,10 +59,9 @@ const CandidateSearch: React.FC = () => {
     <>
       <h1>CandidateSearch</h1>
       <div className="candidate-card" key={currentCandidate.Login}>
-        <div className="candidate-card-image">
+        <div className="candidate-card-image candidate-card-info">
           <img src={currentCandidate.Avatar_url} alt="" />
-        </div>
-        <div className="candidate-card-info">
+          <div>{currentCandidate.Login}</div>
           <div>{currentCandidate.Location}</div>
           <div>{currentCandidate.Email}</div>
           <div>{currentCandidate.Company}</div>
@@ -69,9 +70,11 @@ const CandidateSearch: React.FC = () => {
       </div>
       <div className="button-container">
         <div
-          className="minus-button"
+          className=""
           onClick={() =>
             setCurrentCandidate({
+              Image: "",
+              Username: "",
               Avatar_url: "",
               Location: "",
               Email: "",
@@ -82,9 +85,9 @@ const CandidateSearch: React.FC = () => {
             })
           }
         >
-          -
+          <div className="minus-button symbol">-</div>
         </div>
-        <div className="plus-button" onClick={addToPotentialCandidates}>
+        <div className="plus-button symbol" onClick={addToPotentialCandidates}>
           +
         </div>
       </div>
@@ -93,3 +96,5 @@ const CandidateSearch: React.FC = () => {
 };
 
 export default CandidateSearch;
+
+

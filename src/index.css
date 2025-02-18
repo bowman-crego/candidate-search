@@ -94,6 +94,24 @@ tbody tr:nth-child(odd) {
   background-color: #333333;
 }
 
+.image {
+  width: 100%;
+  height: auto;
+}
+.login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
 .nav {
   display: flex;
   justify-content: flex-start;
@@ -115,8 +133,11 @@ tbody tr:nth-child(odd) {
 }
 
 .table {
-  width: 80vw;
+  width: 100vw;
   table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  
 }
 
 .minus-button {
@@ -125,8 +146,16 @@ tbody tr:nth-child(odd) {
   width: 100px;
   padding: 10px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
   align-items: center;
   pointer-events: auto;
+  cursor: pointer;
+  transition: background-color 0.25s; 
+}
+
+.symbol{
+  font-size: 100px;
 }
 
 .plus-button {
@@ -135,6 +164,9 @@ tbody tr:nth-child(odd) {
   width: 100px;
   padding: 10px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
   align-items: center;
   pointer-events: auto;
+  cursor: pointer
 }
