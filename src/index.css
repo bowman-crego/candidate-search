@@ -103,7 +103,7 @@ tbody tr:nth-child(odd) {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+ 
 }
 .button-container {
   display: flex;
@@ -111,6 +111,7 @@ tbody tr:nth-child(odd) {
   align-items: center;
   margin-top: 1em;
 }
+
 
 .nav {
   display: flex;
